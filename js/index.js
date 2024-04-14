@@ -24,15 +24,33 @@
  https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
  70 === 01:10
  */
-function calkTime(time) {
-  if (typeof time !== "number") {
-    return
-  }
-  const hours = Math.floor(time / 60).toString().padStart(2, 0);
-  const min = (time % 60).toString().padStart(2, 0);
-  return `${hours}:${min}`
+// function calkTime(time) {
+//   if (typeof time !== "number") {
+//     return
+//   }
+//   const hours = Math.floor(time / 60).toString().padStart(2, 0);
+//   const min = (time % 60).toString().padStart(2, 0);
+//   return `${hours}:${min}`
 
-}
+// }
 
-const answer = +prompt("Number please");
-console.log(calkTime(answer));
+// const answer = +prompt("Number please");
+// console.log(calkTime(answer));
+
+/**
+
+ *? Напишіть цикл, який виводить у консоль
+
+ *? всі непарні числа  від max до min  за спаданням
+
+ */
+
+ const max = 50;
+
+ const min = 23;
+ for(let i = max; i >= min; i--) {
+  if(i % 2 === 0) {
+   console.log(i); 
+  } 
+  
+ }
