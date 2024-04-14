@@ -65,21 +65,42 @@
 *? інакше виводить рядок "Невірний пароль!"
  */
 
-function autorization() {
-  const login = prompt("Enter login:");
-  if (login === "Admin") {
-    const password = prompt("Enter password:");
-    if (password === "Password") {
-      alert("hello admin");
-    } else {
-      alert("Wrong password!");
-    }
-  } else if (login === "" || login === null) {
-    // (!login) === (login === "" || login === null) -- false
-    alert("Canceled");
-  } else {
-    alert("I don't know!");
-  }
-}
+// function autorization() {
+//   const login = prompt("Enter login:");
+//   if (login === "Admin") {
+//     const password = prompt("Enter password:");
+//     if (password === "Password") {
+//       alert("hello admin");
+//     } else {
+//       alert("Wrong password!");
+//     }
+//   } else if (login === "" || login === null) {
+//     // (!login) === (login === "" || login === null) -- false
+//     alert("Canceled");
+//   } else {
+//     alert("I don't know!");
+//   }
+// }
 
-autorization();
+// autorization();
+
+/**
+ *? При завантаженні сторінки користувачеві пропонується
+ *? в prompt ввести число. Введення додається до значення
+ *? змінної total.
+ *? Операція введення числа триває до того часу,
+ *? поки користувач не натисне кнопку Cancel у prompt.
+ *? Після того як користувач припинив введення, натиснувши на
+ *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+ 
+ *! Робити перевірку, що користувач ввів саме число,
+ *! а не довільний набір символів не потрібно.
+ */
+let number = prompt("Enter number");
+let total = 0;
+while (number !== null) {
+  console.log(number);
+  total += Number(number);
+  number = prompt("Enter number");
+  }
+alert (`Загальна сума введених чисел дорівнює ${total}.`)
