@@ -37,20 +37,49 @@
 // const answer = +prompt("Number please");
 // console.log(calkTime(answer));
 
+//  *? Напишіть цикл, який виводить у консоль
+//  *? всі непарні числа  від max до min  за спаданням
+//  const max = 50;
+//  const min = 23;
+//  for(let i = max; i >= min; i--) {
+//   if(i % 2 === 0) {
+//    console.log(i);
+//   }
+
+//  }
+
 /**
-
- *? Напишіть цикл, який виводить у консоль
-
- *? всі непарні числа  від max до min  за спаданням
-
+*? Напишіть код, який питає
+*? логін за допомогою prompt та логує результат
+*? у консоль браузера
+    
+*? Якщо відвідувач вводить "Admin",
+*? то prompt запитує пароль.
+*? Якщо нічого не ввели або натиснуто клавішу Esc
+*? вивести рядок "Canceled"
+*? В іншому випадку вивести рядок "Я вас не знаю"
+    
+*? Пароль перевірять так:
+*? Якщо введено пароль "Password",
+*? то вивести рядок "hello admin"
+*? інакше виводить рядок "Невірний пароль!"
  */
 
- const max = 50;
+function autorization() {
+  const login = prompt("Enter login:");
+  if (login === "Admin") {
+    const password = prompt("Enter password:");
+    if (password === "Password") {
+      alert("hello admin");
+    } else {
+      alert("Wrong password!");
+    }
+  } else if (login === "" || login === null) {
+    // (!login) === (login === "" || login === null) -- false
+    alert("Canceled");
+  } else {
+    alert("I don't know!");
+  }
+}
 
- const min = 23;
- for(let i = max; i >= min; i--) {
-  if(i % 2 === 0) {
-   console.log(i); 
-  } 
-  
- }
+autorization();
