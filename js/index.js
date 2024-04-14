@@ -7,12 +7,32 @@
  *? інакше відобразити:"Не знаєте? ECMAScript!"
  */
 
-function cheakAnswer(text) {
-  if (text === "ECMAScript") {
-    alert("Вірно!");
-  } else {
-    alert("Не знаєте? ECMAScript!");
+// function cheakAnswer(text) {
+//   if (text === "ECMAScript") {
+//     alert("Вірно!");
+//   } else {
+//     alert("Не знаєте? ECMAScript!");
+//   }
+// }
+// const answer = prompt("Яка офіційна назва JavaScript?");
+// cheakAnswer(answer);
+
+/**
+Напишіть програму, яка отримає від користувача
+ число (кількість хвилин) та виведе в консоль
+ рядок у форматі годин та хвилин
+ https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+ 70 === 01:10
+ */
+function calkTime(time) {
+  if (typeof time !== "number") {
+    return
   }
+  const hours = Math.floor(time / 60).toString().padStart(2, 0);
+  const min = (time % 60).toString().padStart(2, 0);
+  return `${hours}:${min}`
+
 }
-const answer = prompt("Яка офіційна назва JavaScript?");
-cheakAnswer(answer);
+
+const answer = +prompt("Number please");
+console.log(calkTime(answer));
