@@ -190,13 +190,45 @@
 //     const copia = [...array];
 //     const index = copia.indexOf(elem);
 //     if (index !== -1) {
-//         copia.splice(index, 1); 
+//         copia.splice(index, 1);
 //     }
-    
+
 //     copia.reverse();
 //     return copia.join(` `);
 // }
 
 // console.log(delateElement (arr, "ww"));
+
+// =============================================/28.04.2024====================================================
+// =============================================Task-5====================================================
+//**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+function updateFruits(arr) {
+  const fruitsWithDiscout = [];
+  const discout = 0.8;
+  let id = 1;
+
+  for (const fruit of arr) {
+    let netObj = { ...fruit, price: fruit.price * discout, id };
+
+    // netObj.price = netObj.price * discout;
+    // netObj.id = id;
+    fruitsWithDiscout.push(netObj);
+    id += 1;
+  }
+
+  return fruitsWithDiscout;
+}
+console.log(updateFruits(fruits));
+console.log(fruits);
 
 // =============================================/28.04.2024====================================================
