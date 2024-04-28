@@ -65,21 +65,43 @@
 *? інакше виводить рядок "Невірний пароль!"
  */
 
-function autorization() {
-  const login = prompt("Enter login:");
-  if (login === "Admin") {
-    const password = prompt("Enter password:");
-    if (password === "Password") {
-      alert("hello admin");
-    } else {
-      alert("Wrong password!");
-    }
-  } else if (login === "" || login === null) {
-    // (!login) === (login === "" || login === null) -- false
-    alert("Canceled");
-  } else {
-    alert("I don't know!");
-  }
-}
+// function autorization() {
+//   const login = prompt("Enter login:");
+//   if (login === "Admin") {
+//     const password = prompt("Enter password:");
+//     if (password === "Password") {
+//       alert("hello admin");
+//     } else {
+//       alert("Wrong password!");
+//     }
+//   } else if (login === "" || login === null) {
+//     // (!login) === (login === "" || login === null) -- false
+//     alert("Canceled");
+//   } else {
+//     alert("I don't know!");
+//   }
+// }
 
-autorization();
+// autorization();
+
+/**
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення використовуючи Object.keys() і for...of
+ */
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tennis",
+  premium: true,
+};
+user.mood = 'happy';
+user.hobby = 'skydiving';
+user.premium = false;
+for (const key of Object.keys(user)) {
+  console.log(`${key}:${user[key]}`);
+}
