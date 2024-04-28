@@ -95,12 +95,12 @@
  
  *! Робити перевірку, що користувач ввів саме число,
  *! а не довільний набір символів не потрібно.
- */
-let number = prompt("Enter number");
-let total = 0;
-while (number !== null) {
-  console.log(number);
-  total += Number(number);
-  number = prompt("Enter number");
-  }
-alert (`Загальна сума введених чисел дорівнює ${total}.`)
+//  */
+// let number = prompt("Enter number");
+// let total = 0;
+// while (number !== null) {
+//   console.log(number);
+//   total += Number(number);
+//   number = prompt("Enter number");
+//   }
+// alert (`Загальна сума введених чисел дорівнює ${total}.`)
