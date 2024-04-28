@@ -231,7 +231,7 @@ console.log(updateFruits(fruits));
 console.log(fruits);
 
 // =============================================/28.04.2024====================================================
-/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+/*Напишіть функцію checkBrackets(str) яка приймає рядок VS коду (someFn)
   і перевіряє правильність закриття дужок () {} []
   Якщо рядок містить коректний код функція повертає true.
   В іншому випадку повертає false
@@ -240,3 +240,10 @@ const someFn = `function foo() {
   const arr = [1, 2, 3];
   console.log(arr);
 }`;
+
+function checkBrackets(str) {
+
+}
+
+
+checkBrackets(someFn);
