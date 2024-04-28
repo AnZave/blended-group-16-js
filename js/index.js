@@ -180,5 +180,23 @@
 
 // console.log(calcTotalPrice(stones, "Сапфирио"));
 // =============================================Task-4====================================================
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+// const arr = ["best", "the", "foo", "is", "js"];
+
+// function delateElement (array, elem) {
+//     const copia = [...array];
+//     const index = copia.indexOf(elem);
+//     if (index !== -1) {
+//         copia.splice(index, 1); 
+//     }
+    
+//     copia.reverse();
+//     return copia.join(` `);
+// }
+
+// console.log(delateElement (arr, "ww"));
 
 // =============================================/28.04.2024====================================================
