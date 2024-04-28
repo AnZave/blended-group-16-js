@@ -219,9 +219,8 @@ function updateFruits(arr) {
 
   for (const fruit of arr) {
     let netObj = { ...fruit, price: fruit.price * discout, id };
-
-    // netObj.price = netObj.price * discout;
-    // netObj.id = id;
+    
+    console.log(netObj);
     fruitsWithDiscout.push(netObj);
     id += 1;
   }
