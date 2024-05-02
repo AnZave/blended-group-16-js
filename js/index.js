@@ -206,29 +206,29 @@
 // *? Зробіть знижку 20 % на всі фрукти у масиві
 // *? Надайте ід для кожного продукту
 // */
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
-function updateFruits(arr) {
-  const fruitsWithDiscout = [];
-  const discout = 0.8;
-  let id = 1;
+// function updateFruits(arr) {
+//   const fruitsWithDiscout = [];
+//   const discout = 0.8;
+//   let id = 1;
 
-  for (const fruit of arr) {
-    let netObj = { ...fruit, price: fruit.price * discout, id };
+//   for (const fruit of arr) {
+//     let netObj = { ...fruit, price: fruit.price * discout, id };
     
-    console.log(netObj);
-    fruitsWithDiscout.push(netObj);
-    id += 1;
-  }
+//     console.log(netObj);
+//     fruitsWithDiscout.push(netObj);
+//     id += 1;
+//   }
 
-  return fruitsWithDiscout;
-}
-console.log(updateFruits(fruits));
-console.log(fruits);
+//   return fruitsWithDiscout;
+// }
+// console.log(updateFruits(fruits));
+// console.log(fruits);
 
 // =============================================/28.04.2024====================================================
 /*Напишіть функцію checkBrackets(str) яка приймає рядок VS коду (someFn)
