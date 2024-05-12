@@ -206,44 +206,139 @@
 // *? Зробіть знижку 20 % на всі фрукти у масиві
 // *? Надайте ід для кожного продукту
 // */
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
-function updateFruits(arr) {
-  const fruitsWithDiscout = [];
-  const discout = 0.8;
-  let id = 1;
+// function updateFruits(arr) {
+//   const fruitsWithDiscout = [];
+//   const discout = 0.8;
+//   let id = 1;
 
-  for (const fruit of arr) {
-    let netObj = { ...fruit, price: fruit.price * discout, id };
-    
-    console.log(netObj);
-    fruitsWithDiscout.push(netObj);
-    id += 1;
-  }
+//   for (const fruit of arr) {
+//     let netObj = { ...fruit, price: fruit.price * discout, id };
 
-  return fruitsWithDiscout;
-}
-console.log(updateFruits(fruits));
-console.log(fruits);
+//     console.log(netObj);
+//     fruitsWithDiscout.push(netObj);
+//     id += 1;
+//   }
+
+//   return fruitsWithDiscout;
+// }
+// console.log(updateFruits(fruits));
+// console.log(fruits);
 
 // =============================================/28.04.2024====================================================
-/*Напишіть функцію checkBrackets(str) яка приймає рядок VS коду (someFn)
+/*Напишіть функцію checkBrackets(str) яка приймає рядок JS коду (someFn)
   і перевіряє правильність закриття дужок () {} []
   Якщо рядок містить коректний код функція повертає true.
   В іншому випадку повертає false
 */
-const someFn = `function foo() {
-  const arr = [1, 2, 3];
-  console.log(arr);
-}`;
+// function checkBrackets(str) {
+//   const elements = str.split("");
+//   // console.log(elements);
+//   let elems = [];
+//   for (const element of elements) {
+//     if (
+//       element === "(" ||
+//       element === ")" ||
+//       element === "{" ||
+//       element === "}" ||
+//       element === "[" ||
+//       element === "]"
+//     ) {
+//       elems.push(element);
+//     }
+//   }
+//   // console.log(elems);
+//   if (elems.length % 2 !== 0) {
+//     return `false`;
+//   }
+//   if (
+//     elems.indexOf("(") > elems.indexOf(")") &&
+//     elems.indexOf("{") > elems.indexOf("}") &&
+//     elems.indexOf("[") > elems.indexOf("]")
+//   ) {
+//     return `false`;
+//   }
+//   for (const elem of elems) {
+//     if (elem === "(") {
+//       const elem1 = [...elems.join("").slice(elems.indexOf("("))];
+//       // console.log(elem1);
+//       let brackets = [];
+//       for (const opt of elem1) {
+//         if (opt !== ")") {
+//           brackets.push(opt);
+//         } else if (opt === ")") {
+//           brackets.push(opt);
+//           break;
+//         }
+//       }
+//       if (brackets.length % 2 !== 0) {
+//         return `false`;
+//       }
+//     } else if (elem === "{") {
+//       const elem2 = [...elems.join("").slice(elems.indexOf("{"))];
+//       // console.log(elem2);
+//       let brackets = [];
+//       for (const opt of elem2) {
+//         if (opt !== "}") {
+//           brackets.push(opt);
+//         } else if (opt === "}") {
+//           brackets.push(opt);
+//           break;
+//         }
+//       }
+//       if (brackets.length % 2 !== 0) {
+//         return `false`;
+//       }
+//     } else if (elem === "[") {
+//       const elem3 = [...elems.join("").slice(elems.indexOf("["))];
+//       // console.log(elem3);
+//       let brackets = [];
+//       for (const opt of elem3) {
+//         if (opt !== "]") {
+//           brackets.push(opt);
+//         } else if (opt === "]") {
+//           brackets.push(opt);
+//           break;
+//         }
+//       }
+//       if (brackets.length % 2 !== 0) {
+//         return `false`;
+//       }
+//       return `true`;
+//     }
+//   }
+// }
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
 
-function checkBrackets(str) {
-
-}
-
-
-checkBrackets(someFn);
+// console.log(checkBrackets(someFn));
+// ==================================================================================================================
+// function checkBrackets(str) {
+//   const stack = [];
+//   const obj = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
+//   for (let i = 0; i < str.length; i++) {
+//     const bracket = str[i];
+//     if (bracket === "(" || bracket === "{" || bracket === "[") {
+//       stack.push(bracket);
+//     }
+//     if (bracket === "}" || bracket === ")" || bracket === "]") {
+//       const lastEl = stack.pop();
+//       if (bracket !== obj[lastEl]) {
+//         return false;
+//       }
+//     }
+//   }
+//   if (stack.length) return false;
+//   return true;
+// }
