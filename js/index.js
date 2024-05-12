@@ -451,6 +451,7 @@ const tweets = [
 
 const tags = tweets.flatMap((el) => el.tags);
 const newObject = tags.reduce((acc, el) => {
-  console.log(acc);
+  console.log(`ітерація: ${acc}`);
   return { ...acc, [el]: acc[el] ? acc[el] + 1 : 1 };
 }, {});
+console.log(`Що отримали: ${newObject}`);
