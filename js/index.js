@@ -441,6 +441,63 @@
  *? Поверніть об'єкт, в якому вказано кількість тегів.
  *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
  */
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const tags = tweets.flatMap((el) => el.tags);
+// const newObject = tags.reduce((acc, el) => {
+//   console.log(acc);
+//   return { ...acc, [el]: acc[el] ? acc[el] + 1 : 1 };
+// }, {});
+// ================================================================================
+//TODO:=============================================
+// Створити клас Worker, у якого є властивості name, age, salary.
+//У класу Worker є метод getSalary.
+//Створити клас TopLevelWorker, у якого є властивість hierarchyLevel
+//і який успадковує клас Worker, додаючи метод getHierarchyLevel
+// const HIERARCHY_LEVEL = {
+//   TOP: "top",
+//   BOTTOM: "bottom",
+// };
+// const workerObj = {
+//   name: "Mango",
+//   surname: "Worker",
+//   age: 30,
+//   position: "FE developer",
+//   salary: 5000,
+// };
+
+// class Worker {
+//   constructor(obj) {
+//     this.name = obj.name;
+//     this.age = obj.age;
+//     this.salary = obj.salary;
+//   }
+//   getSalary() {
+//     return this.salary;
+//   }
+// }
+
+// class TopLevelWorker extends Worker {
+//   constructor(obj, levelWorker) {
+//     super(obj);
+//     this.hierarchyLevel = levelWorker;
+//   }
+//   getHierarchyLevel() {
+//     return this.hierarchyLevel;
+//   }
+// }
+// const newWorker = new TopLevelWorker(workerObj, HIERARCHY_LEVEL.TOP);
+// console.log(newWorker);
+
+// =========================================================================
+
 const tweets = [
   { id: "000", likes: 5, tags: ["js", "nodejs"] },
   { id: "001", likes: 2, tags: ["html", "css"] },
@@ -455,3 +512,4 @@ const newObject = tags.reduce((acc, el) => {
   return { ...acc, [el]: acc[el] ? acc[el] + 1 : 1 };
 }, {});
 console.log(`Що отримали: ${newObject}`);
+
