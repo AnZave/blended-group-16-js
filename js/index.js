@@ -219,7 +219,7 @@
 
 //   for (const fruit of arr) {
 //     let netObj = { ...fruit, price: fruit.price * discout, id };
-    
+
 //     console.log(netObj);
 //     fruitsWithDiscout.push(netObj);
 //     id += 1;
@@ -244,7 +244,6 @@
 // function checkBrackets(str) {
 
 // }
-
 
 // checkBrackets(someFn);
 // =============================================/12.05.2024====================================================
@@ -394,25 +393,47 @@
 //   if (stack.length) return false;
 //   return true;
 // }
+// ===========================================================================================
 
+// const fruits = [
 
-const fruits = [
+//   { name: "apple", price: 200 },
 
-  { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
 
-  { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
 
-  { name: "grapes", price: 750 },
+// ];
 
-];
+// function updateFruits(arr) {
+//   return arr.map((el, index) => ({
 
-function updateFruits(arr) {
-  return arr.map((el, index) => ({
-    
-    ...el,
-    price: el.price * 0.8, 
-    id:index +1}))
- 
-}
-console.log(updateFruits(fruits));
+//     ...el,
+//     price: el.price * 0.8,
+//     id:index +1}))
 
+// }
+// console.log(updateFruits(fruits));
+// ======================================================================================
+/**
+ *? З об'єкту concerts потрібно отримати масив
+ *? в якому будуть лише імена міст.
+ *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+ *? відсортувати їх у хронологічному порядку.
+ *? Результат вивести у консоль.
+ *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+ */
+const concerts = {
+  Київ: new Date("2020-04-01"),
+  Умань: new Date("2025-07-02"),
+  Вінниця: new Date("2020-04-21"),
+  Одеса: new Date("2025-03-15"),
+  Хмельницький: new Date("2020-04-18"),
+  Харків: new Date("2025-07-10"),
+};
+
+const city = Object.keys(concerts)
+  .filter((el) => concerts[el] > new Date())
+  .toSorted((a, b) => concerts[a] - concerts[b]);
+console.log(city);
+// =============================================================================
