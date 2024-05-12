@@ -202,10 +202,62 @@
 // =============================================/28.04.2024====================================================
 // =============================================Task-5====================================================
 //**
+// // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// // *? Зробіть знижку 20 % на всі фрукти у масиві
+// // *? Надайте ід для кожного продукту
+// // */
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+
+// function updateFruits(arr) {
+//   const fruitsWithDiscout = [];
+//   const discout = 0.8;
+//   let id = 1;
+
+//   for (const fruit of arr) {
+//     let netObj = { ...fruit, price: fruit.price * discout, id };
+    
+//     console.log(netObj);
+//     fruitsWithDiscout.push(netObj);
+//     id += 1;
+//   }
+
+//   return fruitsWithDiscout;
+// }
+// console.log(updateFruits(fruits));
+// console.log(fruits);
+
+// =============================================/28.04.2024====================================================
+/*Напишіть функцію checkBrackets(str) яка приймає рядок VS коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
+
+// function checkBrackets(str) {
+
+// }
+
+
+// checkBrackets(someFn);
+// =============================================/12.05.2024====================================================
+///**
+
 // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+
 // *? Зробіть знижку 20 % на всі фрукти у масиві
+
 // *? Надайте ід для кожного продукту
+
 // */
+
 // const fruits = [
 //   { name: "apple", price: 200 },
 //   { name: "orange", price: 300 },
@@ -342,3 +394,25 @@
 //   if (stack.length) return false;
 //   return true;
 // }
+
+
+const fruits = [
+
+  { name: "apple", price: 200 },
+
+  { name: "orange", price: 300 },
+
+  { name: "grapes", price: 750 },
+
+];
+
+function updateFruits(arr) {
+  return arr.map((el, index) => ({
+    
+    ...el,
+    price: el.price * 0.8, 
+    id:index +1}))
+ 
+}
+console.log(updateFruits(fruits));
+
