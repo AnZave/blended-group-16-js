@@ -79,6 +79,15 @@ increaseEl.addEventListener("click", () => {
 у кожному елементі списку у 2 рази
 */
 
+const doubleButtonEl = document.querySelector("#double");
+doubleButtonEl.addEventListener("click", () => {
+  allLiEl.forEach((liEl) => {
+    liEl.textContent = BigInt(liEl.textContent) ** 2n;
+  });
+});
+const allLiEl = document.querySelectorAll(".listItem");
+
+console.log(allLiEl);
 //TODO:==============================================
 /*
 Завдання 7
