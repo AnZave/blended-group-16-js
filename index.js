@@ -97,3 +97,25 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
 https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
 https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 */
+
+const outerCircleEl=document.querySelector('.outerCircle')
+const innerCircleEl=document.querySelector('.innerCircle')
+const topOffset = innerCircleEl.offsetTop;
+const leftOffset = innerCircleEl.offsetLeft;
+
+
+innerCircleEl.addEventListener('click',()=>{
+  innerCircleEl.addEventListener('mousemove', (e)=>{(e.screenX, e.screenY)
+  innerCircleEl.style.top=`${e.screenY}px`
+  innerCircleEl.style.left=`${e.screenX}px`
+  console.log(e.screenX,e.screenY)
+  })
+
+})
+outerCircleEl.addEventListener('click', (e)=>{
+  innerCircleEl.style.left=`${leftOffset}px`
+  innerCircleEl.style.top=`${topOffset}px`
+ 
+
+
+})
